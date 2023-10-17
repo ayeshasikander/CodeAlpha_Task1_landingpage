@@ -64,3 +64,29 @@ tl
         stagger: 2,
         top: "-100%"
     }, 'a')
+
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+gsap.from(".cards",{
+    scale:0.8,
+    opacity:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:".cards",
+        scroller:"body",
+        start:"top 70%",
+        end:"top 65%",
+        scrub:1
+    }
+});
+
