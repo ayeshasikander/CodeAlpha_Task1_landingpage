@@ -5,6 +5,7 @@
     font-family: 'montserrat';
     color: #fff;
     pointer-events: all;
+    cursor: pointer;
 }
 
 html,
@@ -50,15 +51,16 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     font-weight: 500;
 }
+
 #nav-bar h4 a {
     text-decoration: none;
     color: #fff;
 }
 
 #cursor {
-    height: 20px;
-    width: 20px;
-    background-color: #864343;
+    height: 15px;
+    width: 15px;
+    background-color: #4e2424;
     border-radius: 50%;
     position: fixed;
     z-index: 99;
@@ -340,6 +342,7 @@ img {
     position: relative;
 }
 
+
 .swiper-slide h4 {
     font-size: 30px;
     width: 50%;
@@ -365,24 +368,78 @@ img {
 .swiper-pagination .swiper-pagination-bullet {
     background: #502121;
 }
-#footer{
+
+#sponser-page {
+    height: 40vh;
+    width: 100%;
+}
+
+.logos {
+    padding: 50px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos::before,
+.logos::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+}
+.logos::before {
+    left: 0;
+    background: linear-gradient(to left,rgba(255,255,255,0),#000000);
+}
+.logos::after {
+    right: 0;
+    background: linear-gradient(to right,rgba(255,255,255,0),#000000);
+}
+.logos-slide {
+    animation: 20s slide linear infinite;
+    display: inline-block;
+}
+
+.logos-slide img {
+    height: 50px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(50deg) brightness(113%) contrast(101%);
+    margin: 0 35px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#footer {
     height: 30vh;
     width: 100%;
     position: relative;
-    background: linear-gradient(to left bottom,rgb(94, 42, 42),rgb(32, 24, 24));
+    background: linear-gradient(to left bottom, rgb(94, 42, 42), rgb(32, 24, 24));
     display: flex;
 }
-#social-media{
+
+#social-media {
     margin-left: 180px;
     margin-top: 30px;
 }
-#social-media h3{
+
+#social-media h3 {
     margin-left: 60px;
     margin-bottom: 10px;
     font-size: 40px;
     font-weight: 700;
 }
-#social-media svg{
+
+#social-media svg {
     height: 50px;
     width: 50px;
     margin: 0 15px;

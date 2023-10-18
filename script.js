@@ -69,13 +69,14 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-        delay: 2500,
+        delay: 1500,
         disableOnInteraction: false,
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    effect:'fade',
 });
 gsap.from(".cards",{
     scale:0.8,
@@ -88,5 +89,6 @@ gsap.from(".cards",{
         end:"top 65%",
         scrub:1
     }
+    
 });
 
